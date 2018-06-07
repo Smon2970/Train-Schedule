@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Train Schedule</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script  src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="Assets/style.css">
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class=" text-center">
+            <h1>Train Schedule <br/><small class="time"></small></h1>
+        </div> 
+    </div> 
+
+    <div class="row">
+        <div class="col-sm-12 col-md-3">
+          <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Add Train</h3>
+                </div>
+
+                <form>
+                    <div class="form-group">
+                      <label for="trainName">Train Name</label>
+                      <input type="text" class="form-control" id="trainName" placeholder="Train Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="trainDestination">Destination</label>
+                        <input type="text" class="form-control" id="trainDestination" placeholder="Destination">
+                      </div>
+                      <div class="form-group">
+                        <label for="firstTrain">Train Arrival Time<br/></label>
+                        <input type="text" class="form-control" id="trainTime" placeholder="Time of Arrival">
+                      </div>
+                      <div class="form-group">
+                            <label for="frequency">Frequency<br/></label>
+                            <input type="text" class="form-control" id="frequency" placeholder="Frequency">
+                        </div>
+
+                            <button type="submit" class="submit">Submit</button>
+                            <button type="reset" class="reset">Clear</button>
+                </form>
+            </div>
+        </div>
+    </div> 
+
+    <br>
+    <br>
+<div class="container">
+    <table class="table" id="newTable">
+        <thead>
+            <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+            </tr>
+        </thead>
+        <tbody>
+                <!-- <tr id="Table">
+                        <td class="place-train-name" scope="col"></td>
+                        <td class="place-destination" scope="col"></td>
+                        <td class="place-frequency" scope="col"></td>
+                        <td class="place-next-arrival" scope="col"></td>
+                        <td class="place-minutes-away" scope="col"></td>
+                </tr>
+                         <tr id="new"></tr> -->
+        </tbody>
+    </table>
+</div>
+
+    <script type="text/javascript" src= "Assets/app.js"></script>
+
+</body>
